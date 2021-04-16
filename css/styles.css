@@ -505,6 +505,84 @@ div.footer-position {
 .social-link.footer-icon:active {
   background-color: var(--hover-color);
 }
+/*Форма подписка*/
+.form-footer {
+  width: 570px;
+  height: 86px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.form-field-footer {
+  display: flex;
+  flex-direction: column;
+}
+.form-lible-footer {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--dark-bg-text-color);
+  margin-bottom: 17px;
+}
+
+.form-input-footer {
+  width: 358px;
+  height: 42.44px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--dark-bg-text-color);
+
+  background-color: var(--dark-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  padding: 12.5px 16px;
+  transition: border var(--animation-duration),
+    -webkit-text-fill-color var(--animation-duration),
+    -webkit-box-shadow var(--animation-duration);
+}
+.form-input-footer:focus {
+  outline: none;
+  border: 1px solid var(--dark-bg-text-color);
+}
+.form-input-footer::placeholder {
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-input-footer:-webkit-autofill,
+.form-input-footer:-webkit-autofill:hover,
+.form-input-footer:-webkit-autofill:focus {
+  -webkit-text-fill-color: currentColor;
+  -webkit-box-shadow: 0 0 0px 1000px var(--dark-bg-color) inset;
+}
+.button-submit-footer {
+  height: 42.44px;
+  padding: 10px 29px;
+
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--dark-bg-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-left: 12px;
+}
+.button-submit-footer .icon {
+  fill: var(--dark-bg-text-color);
+  margin-left: 10px;
+}
 
 /*---------------------------------------------------------------------------------------------------*/
 /* страница портфолио */
@@ -685,19 +763,148 @@ div.footer-position {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--dark-bg-text-color);
+  transition: fill var(--animation-duration);
 }
 .button-close .icon {
   width: 11px;
   height: 11px;
   fill: var(--button-close-color);
 }
+.button-close .icon:hover,
+.button-close .icon:focus {
+  fill: var(--hover-color);
+  cursor: pointer;
+}
 .form {
   width: 528px;
   height: 581px;
   padding: 40px;
 }
+.form-heading {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-color);
+}
 .form-field {
   display: flex;
   flex-direction: column;
+}
+.form .form-field:not(:last-child) {
   margin-bottom: 10px;
+}
+.form-lible {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+.form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  transition: border var(--animation-duration), color var(--animation-duration);
+}
+.form-textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  transition: border var(--animation-duration), color var(--animation-duration);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+  color: var(--hover-color);
+}
+.form-field input:focus + .icon,
+.form-field textarea:focus + .icon {
+  fill: var(--hover-color);
+}
+.form-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-field-position {
+  position: relative;
+}
+.form .form-lible {
+  width: 100%;
+}
+.form .form-input {
+  width: 100%;
+}
+.form-field-position .icon {
+  position: absolute;
+  fill: var(--title-color);
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill var(--animation-duration);
+}
+.form-Agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: var(--title-color);
+  text-align: center;
+}
+.form-input-Agreement {
+  width: 16px;
+  height: 15px;
+  margin-right: 11px;
+}
+.form-label-Agreement {
+  color: var(--text-color);
+}
+.form-link {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+.button-submit {
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--dark-bg-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  transition: background-color var(--animation-duration),
+    box-shadow var(--animation-duration);
+}
+.button-submit:hover,
+.button-submit:focus,
+.button-submit:active {
+  --button-color: #188ce8;
 }
