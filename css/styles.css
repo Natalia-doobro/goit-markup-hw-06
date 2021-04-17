@@ -722,16 +722,14 @@ div.footer-position {
 
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: background-color var(--animation-duration);
+  transition: opacity var(--animation-duration);
 }
 .backdrop.is-hidden {
-  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 /*модалка*/
 .is-hidden .modal {
-  visibility: hidden;
   opacity: 0;
 }
 .modal {
@@ -775,6 +773,7 @@ div.footer-position {
   fill: var(--hover-color);
   cursor: pointer;
 }
+/*модалка форма заполнения*/
 .form {
   width: 528px;
   height: 581px;
@@ -857,11 +856,8 @@ div.footer-position {
   transform: translateY(-50%);
   transition: fill var(--animation-duration);
 }
+/*чекбокси*/
 .form-Agreement {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   margin-top: 20px;
   margin-bottom: 30px;
 
@@ -869,21 +865,44 @@ div.footer-position {
   font-size: 14px;
   line-height: 1.7;
 
-  color: var(--title-color);
   text-align: center;
 }
-.form-input-Agreement {
-  width: 16px;
-  height: 15px;
-  margin-right: 11px;
-}
 .form-label-Agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   color: var(--text-color);
 }
+.form-input-Agreement {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+.form-input-Agreement:checked + .icon {
+  background-color: var(--hover-color);
+  border: 1px solid var(--hover-color);
+  background-image: url("../images/icons.svg/check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+.form-label-Agreement .icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border-radius: 4px;
+
+  border: 2px solid var(--title-color);
+  margin-right: 11px;
+}
+
 .form-link {
   color: var(--hover-color);
   text-decoration: underline;
 }
+/*кнопка закрытия*/
 .button-submit {
   padding: 10px 55px;
   margin-left: auto;
