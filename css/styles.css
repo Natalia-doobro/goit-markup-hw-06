@@ -19,7 +19,7 @@
   --dark-dg-filters-color: #f5f4fa;
   --icon-color: #afb1b8;
   --button-close-color: #000000;
-  --animation-duration: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Главная */
 body {
@@ -896,6 +896,9 @@ div.footer-position {
 
   border: 2px solid var(--title-color);
   margin-right: 11px;
+
+  transition: background-color var(--animation-duration),
+    background-image var(--animation-duration);
 }
 
 .form-link {
